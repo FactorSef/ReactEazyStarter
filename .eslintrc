@@ -1,0 +1,19 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true,
+		"commonjs": true
+	},
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"project": "tsconfig.json",
+		"tsconfigRootDir": "."
+	},
+	"extends": [
+		"./config/eslint/js.config.json",
+		"./config/eslint/ts.config.json",
+		"./config/eslint/react.config.json"
+	],
+	"rules": {
+	}
+}

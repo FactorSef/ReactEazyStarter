@@ -1,0 +1,25 @@
+{
+  "plugins": [
+    "react",
+    "react-hooks"
+  ],
+  "settings": {
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "react/no-access-state-in-setstate": "error",
+    "react/no-danger": "error",
+    "react/no-multi-comp": "error",
+    "react/no-this-in-sfc": "error",
+    "react/prefer-stateless-function": "error",
+    "react/jsx-filename-extension": [ "error", { "extensions": [ ".tsx" ] } ],
+    "react/jsx-no-useless-fragment": "error",
+    "react/jsx-pascal-case": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}
