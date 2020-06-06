@@ -1,31 +1,28 @@
 # React Eazy Starter
+A simple starter with a ready-made configuration for working with React + Typescript
 
-## Зависимости:
-* [Program] Node 13.12.0
-* [vscode ext] EditorConfig
-* [vscode ext] ESLint
+## Dependencies:
+* Node ^13.12.0
+* [vscode ext][EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
-## Решение включает:
-+ React
-+ Typescript
-+ Webpack 4
-+ Babel 7
-+ SASS/SCSS
-+ LESS
-+ ESLint
-- Stylelint
-- axios
-- MobX
-- Оптимизации сборки
-- - Terser
-- - SplitChunks
-- Storybook
+## Run commands: 
+Command | Description
+| ------------------ | -------------------------------------------------------- |
+| npm start          | Run `webpack-dev-server` in `development` mode           |
+| npm run build      | Run build in `production` mode                           |
+| npm run watch:prod | Runs build in `production` mode with the` --watch` flag  |
+| npm run watch:dev  | Runs build in `development` mode with the` --watch` flag |
 
-## Работа с проектом
-
-| Комманда           | Описание                                                        |
-| ------------------ | --------------------------------------------------------------- |
-| npm start          | Запускает dev-server в режиме development                       |
-| npm run build      | Запускает сборку в режиме production                            |
-| npm run watch:prod | Запускает сборку с отслеживанием изменений в режиме production  |
-| npm run watch:dev  | Запускает сборку с отслеживанием изменений в режиме development |
+## To do:
+- [x] React
+- [x] Typescript
+- [x] Webpack 4
+- [x] Babel 7
+- [x] SASS/SCSS
+- [x] LESS
+- [x] ESLint
+- [ ] Stylelint
+- [ ] axios
+- [ ] MobX
+- [ ] Build optiomization
+- [ ] Storybook
