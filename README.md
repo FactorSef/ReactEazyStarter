@@ -1,19 +1,18 @@
 # React Eazy Starter
 
-## Требования к работе:
+## Зависимости:
 * [Program] Node 13.12.0
 * [vscode ext] EditorConfig
 * [vscode ext] ESLint
 
 ## Решение включает:
-
 + React
 + Typescript
 + Webpack 4
 + Babel 7
 + SASS/SCSS
 + LESS
-- ESLint
++ ESLint
 - Stylelint
 - axios
 - MobX
