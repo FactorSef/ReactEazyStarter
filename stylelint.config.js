@@ -1,5 +1,12 @@
 module.exports = {
+	extends: [
+		'stylelint-config-standard',
+		'stylelint-config-rational-order',
+	],
+	plugins: ['stylelint-order', 'stylelint-declaration-block-no-ignored-properties'],
 	rules: {
+		"plugin/declaration-block-no-ignored-properties": true, // https://github.com/kristerkari/stylelint-declaration-block-no-ignored-properties
+
 		'color-no-invalid-hex': true, // Запрет недопустимых HEX цветов
 
 		'font-family-no-duplicate-names': true, // Запрет дубликатов имен шрифтов

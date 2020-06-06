@@ -5,7 +5,7 @@ A simple starter with a ready-made configuration for working with React + Typesc
 * Node ^13.12.0
 * [vscode ext][EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
-## Run commands: 
+## Run commands:
 Command | Description
 | ------------------ | -------------------------------------------------------- |
 | npm start          | Run `webpack-dev-server` in `development` mode           |
@@ -21,8 +21,8 @@ Command | Description
 - [x] SASS/SCSS
 - [x] LESS
 - [x] ESLint
-- [ ] Stylelint
+- [x] Stylelint
 - [ ] axios
 - [ ] MobX
-- [ ] Build optiomization
+- [ ] Build optimization
 - [ ] Storybook
