@@ -10,8 +10,8 @@ Command | Description
 | ------------------ | -------------------------------------------------------- |
 | npm start          | Run `webpack-dev-server` in `development` mode           |
 | npm run build      | Run build in `production` mode                           |
-| npm run watch:prod | Runs build in `production` mode with the` --watch` flag  |
-| npm run watch:dev  | Runs build in `development` mode with the` --watch` flag |
+| npm run watch:prod | Runs build in `production` mode with the `--watch` flag  |
+| npm run watch:dev  | Runs build in `development` mode with the `--watch` flag |
 
 ## To do:
 - [x] React
