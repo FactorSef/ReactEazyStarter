@@ -7,19 +7,24 @@
     "noImplicitAny": false, // Предупреждение о типе "any"
     "allowSyntheticDefaultImports": true, // Разрешить импорт по умолчанию из модулей без экспорта по умолчанию.
     "esModuleInterop": true, // Позволяет импортировать модули CommonJS как модули ES6
-    "allowJs": false, // Разрешает включение js файлов в копиляцию
-
-		"lib": ["es5", "es6", "es7", "es2017", "dom"],
-		"sourceMap": true,
-		"moduleResolution": "node",
-		"forceConsistentCasingInFileNames": true,
-		"noImplicitReturns": true,
-		"noImplicitThis": true,
-		"strictNullChecks": true,
-		"suppressImplicitAnyIndexErrors": true,
-		"noUnusedLocals": true,
-		"declaration": true,
-		"experimentalDecorators": true,
-		"emitDecoratorMetadata": true
-  },
+    "allowJs": true, // Разрешает включение js файлов в копиляцию
+    "lib": [
+      "es5",
+      "es6",
+      "es7",
+      "es2017",
+      "dom"
+    ],
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
 }
