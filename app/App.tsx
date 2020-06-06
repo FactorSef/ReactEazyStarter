@@ -6,15 +6,20 @@ import './style.less';
 const App = (): React.ReactElement => {
 	const [test, setTest] = React.useState('test');
 
-	const setKek = () => {
+	const handleSetKek = (): void => {
 		setTest('kek');
 	};
 
 	return (
 		<>
-			<h1>{String.format('{0}, {1}', 'hello', test)}</h1>
+			<h1
+				className="kek"
+				style={{}}
+			>
+				{String.format('{0}, {1}', 'hello', test)}
+			</h1>
 
-			<button onClick={setKek}>set kek</button>
+			<button onClick={handleSetKek} type="button">set kek</button>
 		</>
 	);
 };
