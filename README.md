@@ -31,7 +31,7 @@ A simple non-CRA starter with a ready-made configuration for working with React.
 -   [x] ESLint
 -   [x] Stylelint
 -   [x] Prettier
--   [ ] Pre-commit hooks
+-   [x] Pre-commit hooks
 -   [ ] axios
 -   [ ] MobX
 -   [x] Build optimization
