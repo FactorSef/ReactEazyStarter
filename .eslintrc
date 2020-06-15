@@ -15,6 +15,7 @@
 		"./config/eslint/ts.config.json",
 		"./config/eslint/react.config.json"
 	],
+	"ignorePatterns": "**/*.module.*.d.ts",
 	"rules": {
 	}
 }

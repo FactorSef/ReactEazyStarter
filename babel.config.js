@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-
 module.exports = function (api) {
 	api.cache(true);
 
@@ -9,8 +6,14 @@ module.exports = function (api) {
 		'@babel/preset-react',
 		'@babel/preset-env',
 	];
+
 	const plugins = [
+		['@babel/plugin-proposal-decorators', { legacy: true }],
+		['@babel/plugin-proposal-class-properties', { loose: true }],
 		'react-hot-loader/babel',
+		'lodash',
+		'@babel/plugin-proposal-logical-assignment-operators',
+		'@babel/plugin-proposal-optional-chaining',
 	];
 
 	return {

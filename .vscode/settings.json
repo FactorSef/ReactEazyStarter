@@ -5,4 +5,5 @@
     "typescriptreact",
     "typescript",
   ],
+  "typescript.tsserver.pluginPaths": ["typescript-plugin-css-modules"],
 }

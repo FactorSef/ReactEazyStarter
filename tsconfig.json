@@ -1,30 +1,37 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
-    "target": "ES5",
     "module": "CommonJS",
-    "jsx": "react",
-    "noImplicitAny": false, // Предупреждение о типе "any"
-    "allowSyntheticDefaultImports": true, // Разрешить импорт по умолчанию из модулей без экспорта по умолчанию.
-    "esModuleInterop": true, // Позволяет импортировать модули CommonJS как модули ES6
-    "allowJs": true, // Разрешает включение js файлов в копиляцию
-    "lib": [
-      "es5",
-      "es6",
-      "es7",
-      "es2017",
-      "dom"
-    ],
-    "sourceMap": true,
-    "moduleResolution": "node",
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
-    "declaration": true,
+    "target": "ES5",
+    "allowJs": true, // Add to compile .js files
+    "checkJs": false, // Report errors in .js files
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
-  }
+    "jsx": "react",
+    "moduleResolution": "Node",
+    "noImplicitAny": false,
+    "removeComments": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "node_modules/*",
+        "./app/*",
+        "./typings/*",
+      ],
+    },
+    "typeRoots": [
+      "node_modules/@types",
+      "./typings",
+    ],
+  },
+  "include": [
+    "app/**/*",
+    "typings/**/*"
+  ],
+  "exclude": [
+    "./config/*",
+    "./babel.config.js"
+  ]
 }

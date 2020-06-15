@@ -4,7 +4,7 @@ const postcssNormalize = require('postcss-normalize');
 
 type StringExtend = 'scss' | 'less';
 
-export default (parser: StringExtend) => ({
+export default (parser: StringExtend, useSourceMap: boolean = false) => ({
 	loader: 'postcss-loader',
 	options: {
 		syntax: `postcss-${parser}`,
@@ -19,6 +19,6 @@ export default (parser: StringExtend) => ({
 			}),
 			postcssNormalize(),
 		],
-		sourceMap: true,
+		sourceMap: useSourceMap,
 	}
 });

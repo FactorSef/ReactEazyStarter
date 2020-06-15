@@ -20,9 +20,17 @@ Command | Description
 - [x] Babel 7
 - [x] SASS/SCSS
 - [x] LESS
+- [x] CSS Modules
 - [x] ESLint
 - [x] Stylelint
+- [ ] Prettier
 - [ ] axios
 - [ ] MobX
-- [ ] Build optimization
+- [x] Build optimization
 - [ ] Storybook
+
+## Features:
+* [@babel/plugin-proposal-decorators](https://babeljs.io/docs/en/next/babel-plugin-proposal-decorators.html)
+* [@babel/plugin-proposal-class-properties](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties)
+* [@babel/plugin-proposal-logical-assignment-operators](https://babeljs.io/docs/en/babel-plugin-proposal-logical-assignment-operators)
+* [@babel/plugin-proposal-optional-chaining](https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining)
