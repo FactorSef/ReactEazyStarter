@@ -1,6 +1,6 @@
 # React Eazy Starter
 
-A simple starter with a ready-made configuration for working with React + Typescript
+A simple non-CRA starter with a ready-made configuration for working with React.
 
 ## Workspace:
 
