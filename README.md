@@ -2,10 +2,13 @@
 
 A simple starter with a ready-made configuration for working with React + Typescript
 
-## Dependencies:
+## Workspace:
 
--   Node ^13.12.0
+-   [nodejs][node ^13.12.0](https://nodejs.org/)
 -   [vscode ext][editorconfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+-   [vscode ext][eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+-   [vscode ext][stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+-   [vscode ext][prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 ## Run commands:
 
