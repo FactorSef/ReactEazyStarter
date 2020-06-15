@@ -2,6 +2,7 @@ module.exports = {
 	endOfLine: 'lf',
 	tabWidth: 4,
 	useTabs: true,
+	printWidth: 180,
 	overrides: [
 		{
 			files: ['*.js', '*.jsx'],
