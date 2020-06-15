@@ -3,7 +3,12 @@
     "javascript",
     "javascriptreact",
     "typescriptreact",
-    "typescript",
+    "typescript"
   ],
-  "typescript.tsserver.pluginPaths": ["typescript-plugin-css-modules"],
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

@@ -13,9 +13,9 @@
 	"extends": [
 		"./config/eslint/js.config.json",
 		"./config/eslint/ts.config.json",
-		"./config/eslint/react.config.json"
+		"./config/eslint/react.config.json",
+		"prettier"
 	],
 	"ignorePatterns": "**/*.module.*.d.ts",
-	"rules": {
-	}
+	"rules": {}
 }

@@ -1,11 +1,13 @@
 module.exports = {
-	extends: [
-		'stylelint-config-standard',
-		'stylelint-config-rational-order',
+	extends: ['stylelint-config-standard', 'stylelint-config-rational-order'],
+	plugins: [
+		'stylelint-order',
+		'stylelint-declaration-block-no-ignored-properties',
 	],
-	plugins: ['stylelint-order', 'stylelint-declaration-block-no-ignored-properties'],
 	rules: {
-		"plugin/declaration-block-no-ignored-properties": true, // https://github.com/kristerkari/stylelint-declaration-block-no-ignored-properties
+		indentation: 'tab',
+
+		'plugin/declaration-block-no-ignored-properties': true, // https://github.com/kristerkari/stylelint-declaration-block-no-ignored-properties
 
 		'color-no-invalid-hex': true, // Запрет недопустимых HEX цветов
 

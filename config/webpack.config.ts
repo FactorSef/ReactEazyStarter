@@ -11,11 +11,24 @@ import css from './css';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
-const mode = process.env.NODE_ENV === 'development'
-	? 'development' : process.env.NODE_ENV === 'production'
-		? 'production' : 'development';
+const mode =
+	process.env.NODE_ENV === 'development'
+		? 'development'
+		: process.env.NODE_ENV === 'production'
+		? 'production'
+		: 'development';
 
-const extensions = ['.ts', '.tsx', '.js', '.jsx', '.css', '.sass', '.scss', '.less', '.json'];
+const extensions = [
+	'.ts',
+	'.tsx',
+	'.js',
+	'.jsx',
+	'.css',
+	'.sass',
+	'.scss',
+	'.less',
+	'.json',
+];
 
 const config: webpack.Configuration = {
 	mode,
@@ -48,17 +61,17 @@ const config: webpack.Configuration = {
 			{
 				test: /\.[jt]s(x)?$/,
 				exclude: '/node_modules/',
-				use: [
-					'react-hot-loader/webpack',
-					'babel-loader',
-				],
+				use: ['react-hot-loader/webpack', 'babel-loader'],
 			},
 			{
 				test: /\.s[ac]ss$/,
 				use: [
 					isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
 					...css(true, isProduction),
-					{ loader: 'sass-loader', options: { sourceMap: isProduction } },
+					{
+						loader: 'sass-loader',
+						options: { sourceMap: isProduction },
+					},
 					postcss('scss', isProduction),
 				],
 				include: /\.module\.s[ac]ss$/,
@@ -68,7 +81,10 @@ const config: webpack.Configuration = {
 				use: [
 					isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
 					...css(false, isProduction),
-					{ loader: 'sass-loader', options: { sourceMap: isProduction } },
+					{
+						loader: 'sass-loader',
+						options: { sourceMap: isProduction },
+					},
 					postcss('scss', isProduction),
 				],
 				exclude: /\.module\.s[ac]ss$/,
@@ -78,7 +94,10 @@ const config: webpack.Configuration = {
 				use: [
 					isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
 					...css(true, isProduction),
-					{ loader: 'less-loader', options: { sourceMap: isProduction } },
+					{
+						loader: 'less-loader',
+						options: { sourceMap: isProduction },
+					},
 					postcss('less', isProduction),
 				],
 				include: /\.module\.less$/,
@@ -88,7 +107,10 @@ const config: webpack.Configuration = {
 				use: [
 					isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
 					...css(false, isProduction),
-					{ loader: 'less-loader', options: { sourceMap: isProduction } },
+					{
+						loader: 'less-loader',
+						options: { sourceMap: isProduction },
+					},
 					postcss('less', isProduction),
 				],
 				exclude: /\.module\.less$/,
@@ -103,9 +125,9 @@ const config: webpack.Configuration = {
 					{
 						loader: 'file-loader',
 						options: {
-							name: 'images/[name].[ext]'
-						}
-					}
+							name: 'images/[name].[ext]',
+						},
+					},
 				],
 			},
 			{
@@ -148,14 +170,14 @@ const config: webpack.Configuration = {
 			failOnError: false,
 			files: '**/*.(c|sa|sc|le)ss',
 			fix: true,
-			configFile: 'stylelint.config.js'
+			configFile: 'stylelint.config.js',
 		}),
 		new HtmlWebpackPlugin({
 			template: pathes.template,
 			minify: isProduction && {
 				removeComments: true,
 				removeEmptyElements: false,
-			}
+			},
 		}),
 		new MiniCssExtractPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
@@ -171,13 +193,15 @@ const config: webpack.Configuration = {
 					name(module) {
 						// get the name. E.g. node_modules/packageName/not/this/part.js
 						// or node_modules/packageName
-						const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
+						const packageName = module.context.match(
+							/[\\/]node_modules[\\/](.*?)([\\/]|$)/,
+						)[1];
 
 						// npm package names are URL-safe, but some servers don't like @ symbols
 						return `vendors.${packageName.replace('@', '')}`;
 					},
 				},
-			}
+			},
 		},
 		minimizer: [
 			new TerserPlugin({
@@ -203,7 +227,7 @@ const config: webpack.Configuration = {
 					],
 				},
 			}),
-		]
+		],
 	},
 
 	devServer: {
