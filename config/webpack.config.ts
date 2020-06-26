@@ -1,9 +1,10 @@
 import * as webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import MiniCssExtractPlugin, { loader } from 'mini-css-extract-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import StylelintPlugin from 'stylelint-webpack-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
 import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
 import pathes from './pathes';
 import postcss from './postcss';
@@ -11,34 +12,16 @@ import css from './css';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
-const mode =
-	process.env.NODE_ENV === 'development'
-		? 'development'
-		: process.env.NODE_ENV === 'production'
-		? 'production'
-		: 'development';
+const mode = process.env.NODE_ENV === 'development' ? 'development' : process.env.NODE_ENV === 'production' ? 'production' : 'development';
 
-const extensions = [
-	'.ts',
-	'.tsx',
-	'.js',
-	'.jsx',
-	'.css',
-	'.sass',
-	'.scss',
-	'.less',
-	'.json',
-];
+const extensions = ['.ts', '.tsx', '.js', '.jsx', '.css', '.sass', '.scss', '.less', '.json'];
 
 const config: webpack.Configuration = {
 	mode,
 	devtool: isProduction ? 'source-map' : '#eval-source-map',
 	context: pathes.appDir,
 	entry: {
-		app: [
-			!isProduction && 'react-hot-loader/patch',
-			pathes.appEntry,
-		].filter(Boolean),
+		app: [!isProduction && 'react-hot-loader/patch', pathes.appEntry].filter(Boolean),
 	},
 	target: 'web',
 	resolve: {
@@ -60,8 +43,8 @@ const config: webpack.Configuration = {
 			},
 			{
 				test: /\.[jt]s(x)?$/,
-				exclude: '/node_modules/',
-				use: ['react-hot-loader/webpack', 'babel-loader'],
+				exclude: /node_modules/,
+				use: ['react-hot-loader/webpack', 'babel-loader', 'ts-loader'],
 			},
 			{
 				test: /\.s[ac]ss$/,
@@ -121,11 +104,19 @@ const config: webpack.Configuration = {
 					test: /\.[jt]s(x)?$/,
 				},
 				use: [
-					{ loader: '@svgr/webpack' },
 					{
-						loader: 'file-loader',
+						loader: '@svgr/webpack',
 						options: {
-							name: 'images/[name].[ext]',
+							svgo: true,
+							template: ({ template }, opts, { imports, componentName, props, jsx, exports }) => template.ast`
+								${imports}
+
+								const ${componentName} = (${props}) => {
+									return ${jsx};
+								};
+
+								export default ${componentName};
+							`,
 						},
 					},
 				],
@@ -193,9 +184,7 @@ const config: webpack.Configuration = {
 					name(module) {
 						// get the name. E.g. node_modules/packageName/not/this/part.js
 						// or node_modules/packageName
-						const packageName = module.context.match(
-							/[\\/]node_modules[\\/](.*?)([\\/]|$)/,
-						)[1];
+						const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
 
 						// npm package names are URL-safe, but some servers don't like @ symbols
 						return `vendors.${packageName.replace('@', '')}`;
@@ -204,6 +193,7 @@ const config: webpack.Configuration = {
 			},
 		},
 		minimizer: [
+			new CleanWebpackPlugin(),
 			new TerserPlugin({
 				cache: true,
 				parallel: true,

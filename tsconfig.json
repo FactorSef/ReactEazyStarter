@@ -3,8 +3,8 @@
     "outDir": "./dist",
     "module": "CommonJS",
     "target": "ES5",
-    "allowJs": true, // Add to compile .js files
-    "checkJs": false, // Report errors in .js files
+    "allowJs": true,
+    "checkJs": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
@@ -15,23 +15,10 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "*": [
-        "node_modules/*",
-        "./app/*",
-        "./typings/*",
-      ],
+      "*": ["node_modules/*", "./app/*", "./typings/*"]
     },
-    "typeRoots": [
-      "node_modules/@types",
-      "./typings",
-    ],
+    "typeRoots": ["./typings", "node_modules/@types"]
   },
-  "include": [
-    "app/**/*",
-    "typings/**/*"
-  ],
-  "exclude": [
-    "./config/*",
-    "./babel.config.js"
-  ]
+  "include": ["typings/index.d.ts", "app/**/*"],
+  "exclude": ["node_modules", "./config/*", "./babel.config.js"]
 }
