@@ -97,6 +97,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "@svgr/plugin-jsx": "^5.4.0",
     "classnames": "^2.2.6",
     "lodash": "^4.17.15",
     "react": "^16.13.1",

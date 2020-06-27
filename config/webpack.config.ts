@@ -7,8 +7,7 @@ import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
 import pathes from './pathes';
-import postcss from './postcss';
-import css from './css';
+import getStyleRules from './styles';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -46,58 +45,9 @@ const config: webpack.Configuration = {
 				exclude: /node_modules/,
 				use: ['react-hot-loader/webpack', 'babel-loader', 'ts-loader'],
 			},
-			{
-				test: /\.s[ac]ss$/,
-				use: [
-					isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
-					...css(true, isProduction),
-					{
-						loader: 'sass-loader',
-						options: { sourceMap: isProduction },
-					},
-					postcss('scss', isProduction),
-				],
-				include: /\.module\.s[ac]ss$/,
-			},
-			{
-				test: /\.s[ac]ss$/,
-				use: [
-					isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
-					...css(false, isProduction),
-					{
-						loader: 'sass-loader',
-						options: { sourceMap: isProduction },
-					},
-					postcss('scss', isProduction),
-				],
-				exclude: /\.module\.s[ac]ss$/,
-			},
-			{
-				test: /\.less$/,
-				use: [
-					isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
-					...css(true, isProduction),
-					{
-						loader: 'less-loader',
-						options: { sourceMap: isProduction },
-					},
-					postcss('less', isProduction),
-				],
-				include: /\.module\.less$/,
-			},
-			{
-				test: /\.less$/,
-				use: [
-					isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
-					...css(false, isProduction),
-					{
-						loader: 'less-loader',
-						options: { sourceMap: isProduction },
-					},
-					postcss('less', isProduction),
-				],
-				exclude: /\.module\.less$/,
-			},
+			...getStyleRules({ type: 'css', modules: true }),
+			...getStyleRules({ type: 'sass', modules: true }),
+			...getStyleRules({ type: 'less', modules: true }),
 			{
 				test: /\.svg$/,
 				issuer: {
@@ -106,18 +56,6 @@ const config: webpack.Configuration = {
 				use: [
 					{
 						loader: '@svgr/webpack',
-						options: {
-							svgo: true,
-							template: ({ template }, opts, { imports, componentName, props, jsx, exports }) => template.ast`
-								${imports}
-
-								const ${componentName} = (${props}) => {
-									return ${jsx};
-								};
-
-								export default ${componentName};
-							`,
-						},
 					},
 				],
 			},
