@@ -76,7 +76,7 @@ const config: webpack.Configuration = {
 					{
 						loader: 'file-loader',
 						options: {
-							name: 'video/[name].[ext]',
+							name: 'videos/[name].[ext]',
 						},
 					},
 				],
@@ -108,7 +108,10 @@ const config: webpack.Configuration = {
 				removeEmptyElements: false,
 			},
 		}),
-		new MiniCssExtractPlugin(),
+		new MiniCssExtractPlugin({
+			filename: 'css/[name].[hash].[id].css',
+			chunkFilename: 'css/[chunkhash].[id].css',
+		}),
 		new webpack.HotModuleReplacementPlugin(),
 	],
 	optimization: {
