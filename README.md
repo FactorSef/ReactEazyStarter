@@ -12,12 +12,14 @@ A simple non-CRA starter with a ready-made configuration for working with React.
 
 ## Run commands:
 
-| Command            | Description                                              |
-| ------------------ | -------------------------------------------------------- |
-| npm start          | Run `webpack-dev-server` in `development` mode           |
-| npm run build      | Run build in `production` mode                           |
-| npm run watch:prod | Runs build in `production` mode with the `--watch` flag  |
-| npm run watch:dev  | Runs build in `development` mode with the `--watch` flag |
+| Command                 | Description                                             |
+| ----------------------- | ------------------------------------------------------- |
+| npm start               | Run `webpack-dev-server` in `development` mode          |
+| npm run build           | Run build in `production` mode                          |
+| npm run watch:prod      | Run build in `production` mode with the `--watch` flag  |
+| npm run watch:dev       | Run build in `development` mode with the `--watch` flag |
+| npm run storybook       | Run storybook server                                    |
+| npm run build:storybook | Run build static storybook app                          |
 
 ## To do:
 
@@ -35,7 +37,7 @@ A simple non-CRA starter with a ready-made configuration for working with React.
 -   [ ] axios
 -   [ ] MobX
 -   [x] Build optimization
--   [ ] Storybook
+-   [x] Storybook
 
 ## Features:
 
