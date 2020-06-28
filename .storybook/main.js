@@ -20,7 +20,6 @@ module.exports = {
 				tsconfigPath: path.resolve(__dirname, '../tsconfig.json'),
 			},
 		});
-
 		config.module.rules.push({
 			test: /\.tsx?$/,
 			include: path.resolve(__dirname, '../src'),

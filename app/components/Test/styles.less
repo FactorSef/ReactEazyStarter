@@ -1,0 +1,20 @@
+.test {
+	display: inline-flex;
+	flex-direction: column;
+	padding: 20px;
+	border: 1px solid #333;
+	border-radius: 5px;
+
+	&-text {
+		margin-bottom: 10px;
+	}
+
+	&-controls {
+		display: flex;
+		justify-content: space-between;
+
+		button:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+}
