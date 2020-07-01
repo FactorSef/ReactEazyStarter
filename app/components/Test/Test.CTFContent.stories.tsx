@@ -1,9 +1,8 @@
 import React from 'react';
 import { withKnobs, text } from '@storybook/addon-knobs';
-// import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 
-import { Test } from '../app/components/Test';
+import { Test } from './index';
 
 export default {
 	component: Test,

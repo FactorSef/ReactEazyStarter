@@ -3,34 +3,29 @@ const path = require('path');
 const getStyleRules = require('./styleRules').getStyleRules;
 
 module.exports = {
-	stories: ['../app/**/*.stories.mdx', '../app/**/*.stories.[tj]sx', '../stories/**/*.stories.mdx', '../stories/**/*.stories.[tj]sx'],
+	stories: ['../app/**/*.stories.mdx', '../app/**/*.stories.[tj]sx'],
 	addons: [
 		'@storybook/addon-actions/register',
 		'@storybook/addon-docs',
 		'@storybook/addon-knobs/register',
 		'@storybook/addon-links/register',
 		'@storybook/addon-notes/register',
-		'@storybook/preset-typescript',
+		// '@storybook/preset-typescript',
 	],
 	webpackFinal: (config) => {
-		config.resolve.extensions.push('.svg', '.scss', '.sass', '.less');
-		config.module.rules[0].use.push(require.resolve('ts-loader'), {
-			loader: require.resolve('react-docgen-typescript-loader'),
-			options: {
-				tsconfigPath: path.resolve(__dirname, '../tsconfig.json'),
-			},
-		});
+		config.resolve.extensions.push('.svg', '.scss', '.sass', '.less', '.tsx');
 		config.module.rules.push({
 			test: /\.tsx?$/,
-			include: path.resolve(__dirname, '../src'),
+			include: path.resolve(process.cwd(), 'app'),
 			use: [
+				'babel-loader',
 				require.resolve('ts-loader'),
 				{
 					loader: require.resolve('react-docgen-typescript-loader'),
 					options: {
 						// Provide the path to your tsconfig.json so that your stories can
 						// display types from outside each individual story.
-						tsconfigPath: path.resolve(__dirname, '../tsconfig.json'),
+						tsconfigPath: path.resolve(process.cwd(), 'tsconfig.json'),
 					},
 				},
 			],
