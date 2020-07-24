@@ -6,6 +6,7 @@ module.exports = {
 	],
 	rules: {
 		indentation: 'tab',
+		'color-hex-length': 'long',
 
 		'plugin/declaration-block-no-ignored-properties': true, // https://github.com/kristerkari/stylelint-declaration-block-no-ignored-properties
 
