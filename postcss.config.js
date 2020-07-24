@@ -1,3 +1,5 @@
+var postcssNormalize = require('postcss-normalize')
+
 module.exports = {
 	syntax: 'postcss-syntax',
 	parser: 'postcss-syntax',
