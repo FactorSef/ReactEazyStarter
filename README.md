@@ -21,24 +21,6 @@ A simple non-CRA starter with a ready-made configuration for working with React.
 | npm run storybook       | Run storybook server                                    |
 | npm run build:storybook | Run build static storybook app                          |
 
-## To do:
-
--   [x] React
--   [x] Typescript
--   [x] Webpack 4
--   [x] Babel 7
--   [x] SASS/SCSS
--   [x] LESS
--   [x] CSS Modules
--   [x] ESLint
--   [x] Stylelint
--   [x] Prettier
--   [x] Pre-commit hooks
--   [ ] axios
--   [ ] MobX
--   [x] Build optimization
--   [x] Storybook
-
 ## Features:
 
 -   [@babel/plugin-proposal-decorators](https://babeljs.io/docs/en/next/babel-plugin-proposal-decorators.html)
