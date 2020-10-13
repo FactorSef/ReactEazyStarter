@@ -1,24 +1,25 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist",
-    "module": "CommonJS",
-    "target": "ES5",
-    "allowJs": true,
-    "checkJs": false,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "jsx": "react",
-    "moduleResolution": "Node",
-    "noImplicitAny": false,
-    "removeComments": true,
-    "sourceMap": true,
-    "baseUrl": ".",
-    "paths": {
-      "*": ["node_modules/*", "./app/*", "./typings/*"]
-    },
-    "typeRoots": ["./typings", "node_modules/@types"]
-  },
-  "include": ["typings/index.d.ts", "app/**/*"],
-  "exclude": ["node_modules", "./config/*", "./babel.config.js"]
-}
+	"compilerOptions": {
+	  "outDir": "./dist",
+	  "module": "CommonJS",
+	  "target": "ES5",
+	  "allowJs": true,
+	  "checkJs": false,
+	  "esModuleInterop": true,
+	  "allowSyntheticDefaultImports": true,
+	  "experimentalDecorators": true,
+	  "jsx": "react",
+	  "moduleResolution": "Node",
+	  "noImplicitAny": false,
+	  "removeComments": true,
+	  "sourceMap": true,
+	  "baseUrl": ".",
+	  "paths": {
+		"*": ["node_modules/*", "./app/*", "./typings/*"]
+	  },
+	  "typeRoots": ["./typings", "node_modules/@types"]
+	},
+	"include": ["typings/index.d.ts", "app/**/*"],
+	"exclude": ["node_modules", "./config/*", "./babel.config.js"]
+  }
+  
