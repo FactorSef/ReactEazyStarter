@@ -57,16 +57,12 @@ const config: webpack.Configuration = {
 			}),
 		}),
 		new webpack.HotModuleReplacementPlugin(),
+		new webpack.ProgressPlugin(),
 	) as webpack.Plugin[],
 	devServer: {
 		hot: true,
 		historyApiFallback: true,
-		stats: {
-			children: false,
-			maxModules: 0,
-			colors: true,
-		},
-		open: true,
+		open: false,
 	},
 };
 

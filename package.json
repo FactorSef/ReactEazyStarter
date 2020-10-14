@@ -11,10 +11,11 @@
     "node": "^13.12.0"
   },
   "scripts": {
-    "start": "env-cmd -e dev webpack-dev-server --config ./configurations/webpack.config.ts",
+    "serve": "env-cmd -e dev ts-node ./scripts/serve.ts",
     "build": "env-cmd -e prod webpack --config ./configurations/webpack.config.ts",
     "watch:prod": "env-cmd -e prod webpack --config ./configurations/webpack.config.ts --watch",
-    "watch:dev": "env-cmd -e dev webpack --config ./configurations/webpack.config.ts --watch"
+    "watch:dev": "env-cmd -e dev webpack --config ./configurations/webpack.config.ts --watch",
+    "wds": "env-cmd -e dev webpack-dev-server --config ./configurations/webpack.config.ts"
   },
   "dependencies": {
     "classnames": "^2.2.6",
