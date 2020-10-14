@@ -31,8 +31,8 @@ class Helpers {
 		return envMaped;
 	}
 
-	static map(...args: string[]) {
-		return args.filter(Boolean) as [string, ...string[]];
+	static map(...args: unknown[]) {
+		return args.filter(Boolean) as unknown[];
 	}
 }
 
