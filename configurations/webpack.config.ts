@@ -57,7 +57,6 @@ const config: webpack.Configuration = {
 			}),
 		}),
 		new webpack.HotModuleReplacementPlugin(),
-		new webpack.ProgressPlugin(),
 	) as webpack.Plugin[],
 	devServer: {
 		hot: true,

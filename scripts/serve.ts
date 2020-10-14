@@ -1,10 +1,8 @@
-// const Webpack = require('webpack');
-// const WebpackDevServer = require('../../../lib/Server');
-// const webpackConfig = require('./webpack.config');
-
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
 import webpackConfig from '../configurations/webpack.config';
+
+webpackConfig.plugins.push(new webpack.ProgressPlugin());
 
 const compiler = webpack(webpackConfig);
 
@@ -31,7 +29,6 @@ compiler.hooks.done.tap('React Eazy Starter serve', stats => {
 		return;
 	}
 
-	// process.stdout.write("\u001b[2J\u001b[0;0H");
 	console.clear();
 	console.log();
 	console.log(`  App running at:`);
@@ -39,7 +36,7 @@ compiler.hooks.done.tap('React Eazy Starter serve', stats => {
 	console.log();
 });
 
-server.listen(webpackConfig.devServer.port || 8080, webpackConfig.devServer.host || '127.0.0.1', () => {
+server.listen(webpackConfig.devServer.port || 8080, webpackConfig.devServer.host || 'localhost', () => {
 	console.log('The server was started');
 });
 
