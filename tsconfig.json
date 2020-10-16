@@ -15,10 +15,10 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-    "*": ["node_modules/*", "./app/*", "./typings/*"]
+      "*": ["node_modules/*", "./app/*", "./typings/*"],
     },
     "typeRoots": ["./typings", "node_modules/@types"],
   },
-  "include": ["typings/index.d.ts", "app/**/*"],
-  "exclude": ["node_modules", "./config/*", "./babel.config.js"]
+  "include": ["typings/*", "app/**/*", "configurations/*", "scripts/*", "utils/*"],
+  "exclude": ["node_modules"]
 }

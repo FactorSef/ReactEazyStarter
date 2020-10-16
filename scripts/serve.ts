@@ -41,6 +41,6 @@ server.listen(webpackConfig.devServer.port || 8080, webpackConfig.devServer.host
 });
 
 
-function getServerAddress(server: any) {
-	return server.listeningApp.address() as { address: string, port: number };
+function getServerAddress(server: unknown) {
+	return (server as { listeningApp: { address: () => { address: string, port: number } } }).listeningApp.address();
 }

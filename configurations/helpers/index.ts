@@ -3,23 +3,23 @@ import { resolve } from 'path';
 import { toUpper, snakeCase } from 'lodash';
 
 class Helpers {
-	static clampEnv(env: string) {
+	static clampEnv(env: string): 'development' | 'production' {
 		return env === 'production' ? env : 'development';
 	}
 
-	static isProduction(env: string) {
+	static isProduction(env: string): boolean {
 		return this.clampEnv(env) === 'production';
 	}
 
-	static getCwdPath() {
+	static getCwdPath(): string {
 		return cwd();
 	}
 
-	static resolvePath(...pathSegments: string[]) {
+	static resolvePath(...pathSegments: string[]): string {
 		return resolve(...pathSegments);
 	}
 
-	static mapEnv(...keysToMap: string[]) {
+	static mapEnv(...keysToMap: string[]): { [key: string]: string } {
 		const envMaped: { [key: string]: string } = {};
 
 		keysToMap.map(function (rawKey) {
@@ -31,8 +31,8 @@ class Helpers {
 		return envMaped;
 	}
 
-	static map(...args: unknown[]) {
-		return args.filter(Boolean) as unknown[];
+	static map(...args: unknown[]): unknown[] {
+		return args.filter(Boolean);
 	}
 }
 

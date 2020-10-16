@@ -46,7 +46,10 @@ const config: webpack.Configuration = {
 		]
 	},
 	plugins: Helpers.map(
-		new ESLintPlugin(),
+		new ESLintPlugin({
+			files: '*',
+			extensions: ['js, ts, jsx, tsx']
+		}),
 		new webpack.DefinePlugin({
 			...Helpers.mapEnv('NODE_ENV'),
 		}),
