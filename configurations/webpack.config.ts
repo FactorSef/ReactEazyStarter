@@ -1,5 +1,6 @@
 import * as webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ESLintPlugin from 'eslint-webpack-plugin';
 
 import Pathes from './pathes';
 import Helpers from './helpers';
@@ -45,6 +46,7 @@ const config: webpack.Configuration = {
 		]
 	},
 	plugins: Helpers.map(
+		new ESLintPlugin(),
 		new webpack.DefinePlugin({
 			...Helpers.mapEnv('NODE_ENV'),
 		}),
