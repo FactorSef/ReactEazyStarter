@@ -19,6 +19,6 @@
     },
     "typeRoots": ["./typings", "node_modules/@types"]
   },
-  "include": ["typings/*", "app/**/*", "configurations/*", "scripts/*", "utils/*"],
+  "include": ["typings/*", "app/**/*", "configurations/**/*", "scripts/**/*", "utils/**/*"],
   "exclude": ["node_modules"]
 }

@@ -2,8 +2,7 @@ import * as webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ESLintPlugin from 'eslint-webpack-plugin';
 
-import Pathes from './pathes';
-import Helpers from './helpers';
+import { Pathes, Helpers } from '../utils';
 import extensions from './extensions';
 
 const { NODE_ENV } = process.env;
