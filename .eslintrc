@@ -16,6 +16,7 @@
   "extends": [
     "./configurations/eslint/js.eslint.json",
     "./configurations/eslint/ts.eslint.json",
-    "./configurations/eslint/react.eslint.json"
+    "./configurations/eslint/react.eslint.json",
+    "prettier"
   ]
 }
