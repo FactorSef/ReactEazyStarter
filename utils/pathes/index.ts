@@ -1,7 +1,13 @@
 import Helpers from '../helpers';
 import { scanDir } from './hooks';
 
+/**
+ * Pathes helpers
+ */
 export class Pathes {
+	/**
+	 * Static pathes
+	 */
 	staticPathes = {
 		app: '',
 		entry: '',
@@ -10,6 +16,9 @@ export class Pathes {
 		packageJson: Helpers.resolvePath('package.json')
 	};
 
+	/**
+	 * Aliases for root/app subdirs (one level)
+	 */
 	aliases = {};
 
 	constructor (rootDirName: string) {
