@@ -59,7 +59,6 @@ const config: webpack.Configuration = {
 			minify: isProduction && ({
 				removeComments: true,
 				removeEmptyAttributes: true,
-				removeEmptyElements: true,
 			}),
 		}),
 		new webpack.HotModuleReplacementPlugin(),
