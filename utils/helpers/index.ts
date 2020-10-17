@@ -16,7 +16,7 @@ class Helpers {
 	}
 
 	static resolvePath(...pathSegments: string[]): string {
-		return resolve(...pathSegments);
+		return resolve(this.getCwdPath(), ...pathSegments);
 	}
 
 	static mapEnv(...keysToMap: string[]): { [key: string]: string } {

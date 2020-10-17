@@ -4,6 +4,7 @@ import ESLintPlugin from 'eslint-webpack-plugin';
 
 import { Pathes, Helpers } from '../utils';
 import extensions from './extensions';
+import { mapStyleLoader } from './webpack';
 
 const { NODE_ENV } = process.env;
 const isProduction = Helpers.isProduction(NODE_ENV);
@@ -41,13 +42,14 @@ const config: webpack.Configuration = {
 					'react-hot-loader/webpack',
 					'babel-loader',
 				],
-			}
+			},
+			...mapStyleLoader(['css', 'sass', 'less'], true),
 		]
 	},
 	plugins: Helpers.map(
 		new ESLintPlugin({
 			files: '*',
-			extensions: ['js, ts, jsx, tsx']
+			extensions: ['js, ts, jsx, tsx'],
 		}),
 		new webpack.DefinePlugin({
 			...Helpers.mapEnv('NODE_ENV'),

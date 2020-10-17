@@ -1,2 +1,8 @@
 node_modules
 dist
+
+# Remove styles from linting
+*.css
+*.less
+*.sass
+*.scss

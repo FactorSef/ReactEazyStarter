@@ -1,4 +1,4 @@
-import { Helpers } from '../index';
+import Helpers from '../helpers';
 import { scanDir } from './hooks';
 
 export class Pathes {
