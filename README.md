@@ -4,8 +4,6 @@
 
 [React Eazy Starter](https://github.com/FactorSef/ReactEazyStarter "React Eazy Starter Repository") is a ready-made solution for those who do not want to use [CRA](https://github.com/FactorSef/ReactEazyStarter "The official Create React App site"), but wants a scalable platform for developing their [React](https://reactjs.org "Official React.js site") applications.
 
-More details about the project are described in [documentation](/docs/intro.md).
-
 ## What was done:
 - [x] Typescript support
 - [x] Support for CSS, SASS / SCSS, LESS
@@ -17,8 +15,10 @@ More details about the project are described in [documentation](/docs/intro.md).
 - [ ] Added Stylelint
 - [x] Added Prettier
 - [ ] Prettier configured
-- [ ] Configured env-cmd
+- [x] Configured env-cmd
 - [ ] Added Storybook
+
+More details about the project are described in [documentation](/docs/intro.md).
 
 ## NPM commands:
 
