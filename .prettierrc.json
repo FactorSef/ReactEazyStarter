@@ -10,7 +10,17 @@
         "parser": "json",
         "useTabs": false,
         "tabWidth": 2,
-        "trailingComma": "none"
+        "trailingComma": "none",
+        "singleQuote": false
+      }
+    },
+    {
+      "files": ["*.html"],
+      "options": {
+        "parser": "html",
+        "useTabs": false,
+        "tabWidth": 2,
+        "singleQuote": false
       }
     },
     {
