@@ -2,11 +2,14 @@ import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
 import webpackConfig from '../configurations/webpack.config';
 
+// Append webpack progress plugin. See more: https://webpack.js.org/plugins/progress-plugin/
 webpackConfig.plugins.push(new webpack.ProgressPlugin());
 
+// Use webpack compiller
 const compiler = webpack(webpackConfig);
 
-const devServerOptions = {
+// Rewrite dev-server options
+const devServerOptions: WebpackDevServer.Configuration = {
 	...webpackConfig.devServer,
 	stats: {
 		children: false,
@@ -20,10 +23,13 @@ const devServerOptions = {
 		entrypoints: false,
 		modules: false,
 	} as webpack.Options.Stats,
+	https: true,
 };
 
+// Use webpack dev server
 const server = new WebpackDevServer(compiler, devServerOptions);
 
+// Added custom hook for output listen server data
 compiler.hooks.done.tap('React Eazy Starter serve', stats => {
 	if (stats.hasErrors()) {
 		return;
@@ -36,7 +42,7 @@ compiler.hooks.done.tap('React Eazy Starter serve', stats => {
 	console.log();
 });
 
-server.listen(webpackConfig.devServer.port || 8080, webpackConfig.devServer.host || 'localhost', () => {
+server.listen(webpackConfig.devServer.port || 8080, webpackConfig.devServer.host || 'localhost', function () {
 	console.log('The server was started');
 });
 
