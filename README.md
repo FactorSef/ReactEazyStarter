@@ -1,29 +1,65 @@
 # React Eazy Starter
 
-A simple non-CRA starter with a ready-made configuration for working with React.
+> Русскоязычная версия: [README.ru.md](/README.ru.md)
 
-## Workspace:
+[React Eazy Starter](https://github.com/FactorSef/ReactEazyStarter "React Eazy Starter Repository") is a ready-made solution for those who do not want to use [CRA](https://github.com/FactorSef/ReactEazyStarter "The official Create React App site"), but wants a scalable platform for developing their [React](https://reactjs.org "Official React.js site") applications.
 
--   [nodejs][node ^13.12.0](https://nodejs.org/)
--   [vscode ext][editorconfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
--   [vscode ext][eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
--   [vscode ext][stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
--   [vscode ext][prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+## What was done:
 
-## Run commands:
+-   [x] Typescript support
+-   [x] Support for CSS, SASS / SCSS, LESS
+-   [x] Support for CSSModules
+-   [x] Added SVGR
+-   [x] Added PostCSS
+-   [x] Added ESLint
+-   [x] Added Stylelint
+-   [x] Added Prettier
+-   [x] Configured env-cmd
+-   [x] Added Storybook
+-   [x] Added MobX
 
-| Command                 | Description                                             |
-| ----------------------- | ------------------------------------------------------- |
-| npm start               | Run `webpack-dev-server` in `development` mode          |
-| npm run build           | Run build in `production` mode                          |
-| npm run watch:prod      | Run build in `production` mode with the `--watch` flag  |
-| npm run watch:dev       | Run build in `development` mode with the `--watch` flag |
-| npm run storybook       | Run storybook server                                    |
-| npm run build:storybook | Run build static storybook app                          |
+More details about the project are described in [documentation](/docs/intro.md).
 
-## Features:
+## NPM commands:
 
--   [@babel/plugin-proposal-decorators](https://babeljs.io/docs/en/next/babel-plugin-proposal-decorators.html)
--   [@babel/plugin-proposal-class-properties](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties)
--   [@babel/plugin-proposal-logical-assignment-operators](https://babeljs.io/docs/en/babel-plugin-proposal-logical-assignment-operators)
--   [@babel/plugin-proposal-optional-chaining](https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining)
+### Run dev-server
+
+```
+npm run serve
+```
+
+### Build for production
+
+```
+npm run build
+```
+
+### Build with `--watch` in `development` mode
+
+```
+npm run watch:dev
+```
+
+### Build with `--watch` in `production` mode
+
+```
+npm run watch:prod
+```
+
+### Run webpack-dev-server
+
+```
+npm run wds
+```
+
+### Run storybook
+
+```
+npm run storybook
+```
+
+### Build storybook
+
+```
+npm run build-storybook
+```

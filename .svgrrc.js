@@ -9,7 +9,7 @@ module.exports = {
 	template: require('./template.svgr.js'),
 	plugins: ['@svgr/plugin-jsx'],
 	svgProps: {
-		width: 1em,
-		height: 1em,
+		width: '1em',
+		height: '1em',
 	},
 };

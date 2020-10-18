@@ -1,15 +1,12 @@
 import React from 'react';
-import './app.style.less';
-import ReStarter from './icons/ReStarter.svg';
+import MobxTimer from 'components/MobxTimer';
 
 const App = (): React.ReactElement => {
 	return (
-		<div className="preview">
-			<span style={{ background: 'green' }}>
-				<ReStarter fill="#000" />
-				sadfsdfsdf
-			</span>
-		</div>
+		<>
+			<h1>Welcome to React Eazy Starter</h1>
+			<MobxTimer />
+		</>
 	);
 };
 

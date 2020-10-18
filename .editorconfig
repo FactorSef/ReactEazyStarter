@@ -2,13 +2,11 @@ root = true
 
 [*]
 end_of_line = lf
-trim_trailing_whitespace = true
 insert_final_newline = true
-
-[*.{json,html}]
-indent_style = space
-indent_size = 2
-
-[*.{js,jsx,mjs,ejs,vue,scss,css,sass,less,ts,tsx}]
+charset = utf-8
 indent_style = tab
 indent_size = 4
+
+[{*.json,.*rc*,*.html}]
+indent_style = space
+indent_size = 2

@@ -16,8 +16,6 @@ declare module '*.module.less' {
 }
 declare module '*.less';
 
-interface SvgrComponent extends React.StatelessComponent<React.SVGAttributes<SVGElement>> {}
-
 declare module '*.svg' {
 	import * as React from 'react';
 
@@ -29,6 +27,4 @@ declare module '*.svg' {
 	function SvgrComponent({ title, titleId, ...props }: Props): JSX.Element;
 
 	export default SvgrComponent;
-	// const value: SvgrComponent;
-	// export default value;
 }

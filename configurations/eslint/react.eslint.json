@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    "react",
+    "react-hooks"
+  ],
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier/react"
+  ],
+  "settings": {
+    "react": {
+      "version": "latest"
+    }
+  },
+  "rules": {}
+}

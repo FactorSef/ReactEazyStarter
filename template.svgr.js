@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * Template for React SVG
  *
@@ -11,7 +12,6 @@ function template({ template }, opts, { imports, componentName, props, jsx, expo
 
 	return typeScriptTpl.ast`
 		import React from 'react';
-
 		const ${componentName} = ({ title, titleId, ...props }) => {
 			const icon = ${jsx};
 			return (
@@ -20,7 +20,6 @@ function template({ template }, opts, { imports, componentName, props, jsx, expo
 				</span>
 			);
 		};
-
 		export default ${componentName};
 	`;
 }

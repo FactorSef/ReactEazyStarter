@@ -1,0 +1,14 @@
+{
+  "overrides": [
+    {
+      "files": [
+        "*.js",
+        "*.jsx"
+      ],
+      "extends": [
+        "eslint:recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}
