@@ -1,1 +1,1 @@
-export { mapLoaders as mapStyleLoader } from './mapStyleLoaders'
+export { mapLoaders as mapStyleLoader } from './styles'
