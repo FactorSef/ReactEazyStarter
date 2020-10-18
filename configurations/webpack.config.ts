@@ -43,7 +43,52 @@ const config: webpack.Configuration = {
 					'babel-loader',
 				],
 			},
+			// Get loaders for css, sass/scss and less
 			...mapStyleLoader(['css', 'sass', 'less'], true),
+			{
+				test: /\.(svg)$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: 'icons/[name].[ext]',
+						},
+					},
+				],
+			},
+			{
+				test: /\.(png|jpe?g|gif)$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: 'images/[name].[ext]',
+						},
+					},
+				],
+			},
+			{
+				test: /\.(mov|mp4|webm)$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: 'videos/[name].[ext]',
+						},
+					},
+				],
+			},
+			{
+				test: /\.(woff|woff2|eot|ttf|otf)$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: 'fonts/[name].[ext]',
+						},
+					},
+				],
+			},
 		]
 	},
 	plugins: Helpers.map(
