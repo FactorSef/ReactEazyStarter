@@ -11,10 +11,8 @@
 - [ ] Added SVGR
 - [x] Added PostCSS
 - [x] Added ESLint
-- [x] ESLint configured (recommended parameters)
-- [ ] Added Stylelint
+- [x] Added Stylelint
 - [x] Added Prettier
-- [x] Prettier configured
 - [x] Configured env-cmd
 - [ ] Added Storybook
 

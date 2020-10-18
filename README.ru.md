@@ -9,10 +9,8 @@
 - [ ] Добавлен SVGR
 - [x] Добавлен PostCSS
 - [x] Добавлен ESLint
-- [x] Настроен ESLint (рекомендуемые параметры)
-- [ ] Добавлен Stylelint
+- [x] Добавлен Stylelint
 - [x] Добавлен Prettier
-- [x] Настроен Prettier
 - [x] Настроен env-cmd
 - [ ] Добавлен Storybook
 

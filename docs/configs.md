@@ -47,8 +47,12 @@ Rule artifacts are located in the directory `[root]/configurations/eslint`:
 
 ## Prettier
 
-The [Prettier](https://prettier.io) configuration is in the file `[root]/.prettierrc.json`
+The [Prettier](https://prettier.io) configuration is located the file `[root]/.prettierrc.json`
 
 ## PostCSS
 
 The [PostCSS](https://postcss.org) configuration is located in the file `[root]/postcss.config.js`
+
+## Stylelint
+
+The [stylelint](https://stylelint.io) configuration is located in the file `[root]/.stylelint.json`

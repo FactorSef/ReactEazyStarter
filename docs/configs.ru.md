@@ -52,3 +52,7 @@
 ## PostCSS
 
 Конфигурация [PostCSS](https://postcss.org) находится в файле `[root]/postcss.config.js`
+
+## Stylelint
+
+Конфигурация [stylelint](https://stylelint.io) находится в файле `[root]/.stylelint.json`

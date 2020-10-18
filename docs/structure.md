@@ -20,3 +20,4 @@
 - babel.config.js - Babel config
 - postcss.config.js - PostCSS configuration
 - tsconfig.json - TypeScript configuration
+- .stylelintrc.json - Stylelint configuration

@@ -1,6 +1,7 @@
 import * as webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ESLintPlugin from 'eslint-webpack-plugin';
+import StyleLintPlugin from 'stylelint-webpack-plugin';
 
 import { Pathes, Helpers } from '../utils';
 import extensions from './extensions';
@@ -95,6 +96,12 @@ const config: webpack.Configuration = {
 		new ESLintPlugin({
 			files: '*',
 			extensions: ['js, ts, jsx, tsx'],
+		}),
+		new StyleLintPlugin({
+			configFile: Helpers.resolvePath('.stylelintrc.json'),
+			files: '**/*.(c|sa|sc|le)ss',
+			fix: false,
+			failOnError: false,
 		}),
 		new webpack.DefinePlugin({
 			...Helpers.mapEnv('NODE_ENV'),
