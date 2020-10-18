@@ -1,4 +1,4 @@
-import process from 'process';
+/* eslint-disable no-undef */
 
 module.exports = function (api) {
 	api.cache(true);

@@ -14,7 +14,7 @@
 - [x] Added Stylelint
 - [x] Added Prettier
 - [x] Configured env-cmd
-- [ ] Added Storybook
+- [x] Added Storybook
 
 More details about the project are described in [documentation](/docs/intro.md).
 

@@ -56,3 +56,7 @@ The [PostCSS](https://postcss.org) configuration is located in the file `[root]/
 ## Stylelint
 
 The [stylelint](https://stylelint.io) configuration is located in the file `[root]/.stylelint.json`
+
+## Storybook
+
+The [storybook](https://storybook.js.org) configuration is located in the directory `[root]/.storybook`

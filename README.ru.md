@@ -12,7 +12,7 @@
 - [x] Добавлен Stylelint
 - [x] Добавлен Prettier
 - [x] Настроен env-cmd
-- [ ] Добавлен Storybook
+- [x] Добавлен Storybook
 
 Более подробно о настройке описано в [документации](/docs/intro.ru.md)
 

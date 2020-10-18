@@ -56,3 +56,7 @@
 ## Stylelint
 
 Конфигурация [stylelint](https://stylelint.io) находится в файле `[root]/.stylelint.json`
+
+## Storybook
+
+Конфигурация [storybook](https://storybook.js.org) находится в каталоге `[root]/.storybook`
