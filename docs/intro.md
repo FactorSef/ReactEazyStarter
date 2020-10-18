@@ -8,8 +8,8 @@ This section describes the main architectural points and instructions for expand
 
 ## Contents
 
-1. [Project structure](./structure.ru.md)
-2. [Project configuration](./configs.ru.md)
+1. [Project structure](./structure.md)
+2. [Project configuration](./configs.md)
 3. env
 4. ESLint
 5. Prettier
