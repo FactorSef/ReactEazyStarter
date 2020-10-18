@@ -16,10 +16,7 @@ const config: webpack.Configuration = {
 	target: 'web',
 	context: Pathes.staticPathes.app,
 	entry: {
-		app: Helpers.map(
-			!Helpers.isProduction(NODE_ENV) && 'react-hot-loader/patch',
-			Pathes.staticPathes.entry
-		) as [string, ...string[]],
+		app: Helpers.map(!Helpers.isProduction(NODE_ENV) && 'react-hot-loader/patch', Pathes.staticPathes.entry) as [string, ...string[]],
 	},
 	output: {
 		filename: 'js/[name].js',
@@ -39,15 +36,26 @@ const config: webpack.Configuration = {
 			{
 				test: /\.[jt]s(x)?$/,
 				exclude: /node_modules/,
-				use: [
-					'react-hot-loader/webpack',
-					'babel-loader',
-				],
+				use: ['react-hot-loader/webpack', 'babel-loader'],
 			},
 			// Get loaders for css, sass/scss and less
 			...mapStyleLoader(['css', 'sass', 'less'], true),
 			{
 				test: /\.(svg)$/,
+				issuer: {
+					test: /\.[jt]s(x)?$/,
+				},
+				use: [
+					{
+						loader: '@svgr/webpack',
+					},
+				],
+			},
+			{
+				test: /\.(svg)$/,
+				issuer: {
+					test: /\.(c|sa|sc|le)ss/,
+				},
 				use: [
 					{
 						loader: 'file-loader',
@@ -90,7 +98,7 @@ const config: webpack.Configuration = {
 					},
 				],
 			},
-		]
+		],
 	},
 	plugins: Helpers.map(
 		new ESLintPlugin({
@@ -108,12 +116,12 @@ const config: webpack.Configuration = {
 		}),
 		new HtmlWebpackPlugin({
 			template: Pathes.staticPathes.template,
-			minify: isProduction && ({
+			minify: isProduction && {
 				removeComments: true,
 				removeEmptyAttributes: true,
-			}),
+			},
 		}),
-		new webpack.HotModuleReplacementPlugin(),
+		new webpack.HotModuleReplacementPlugin()
 	) as webpack.Plugin[],
 	devServer: {
 		hot: true,

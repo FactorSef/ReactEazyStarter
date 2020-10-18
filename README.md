@@ -9,7 +9,7 @@
 -   [x] Typescript support
 -   [x] Support for CSS, SASS / SCSS, LESS
 -   [x] Support for CSSModules
--   [ ] Added SVGR
+-   [x] Added SVGR
 -   [x] Added PostCSS
 -   [x] Added ESLint
 -   [x] Added Stylelint

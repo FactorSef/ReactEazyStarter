@@ -7,7 +7,7 @@
 -   [x] Поддержка TypeScript
 -   [x] Поддержка CSS, SASS/SCSS, LESS
 -   [x] Поддержка CSSModules
--   [ ] Добавлен SVGR
+-   [x] Добавлен SVGR
 -   [x] Добавлен PostCSS
 -   [x] Добавлен ESLint
 -   [x] Добавлен Stylelint

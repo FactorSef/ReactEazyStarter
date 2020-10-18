@@ -15,3 +15,16 @@ declare module '*.module.less' {
 	export = resource;
 }
 declare module '*.less';
+
+declare module '*.svg' {
+	import * as React from 'react';
+
+	type Props = {
+		title?: string;
+		titleId?: string;
+	} & React.SVGProps<SVGSVGElement>;
+
+	function SvgrComponent({ title, titleId, ...props }: Props): JSX.Element;
+
+	export default SvgrComponent;
+}
