@@ -14,7 +14,7 @@
 - [x] ESLint configured (recommended parameters)
 - [ ] Added Stylelint
 - [x] Added Prettier
-- [ ] Prettier configured
+- [x] Prettier configured
 - [x] Configured env-cmd
 - [ ] Added Storybook
 

@@ -12,7 +12,7 @@
 - [x] Настроен ESLint (рекомендуемые параметры)
 - [ ] Добавлен Stylelint
 - [x] Добавлен Prettier
-- [ ] Настроен Prettier
+- [x] Настроен Prettier
 - [x] Настроен env-cmd
 - [ ] Добавлен Storybook
 
