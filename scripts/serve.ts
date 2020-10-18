@@ -23,7 +23,6 @@ const devServerOptions: WebpackDevServer.Configuration = {
 		entrypoints: false,
 		modules: false,
 	} as webpack.Options.Stats,
-	https: true,
 };
 
 // Use webpack dev server
