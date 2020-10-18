@@ -3,7 +3,7 @@
 [React Eazy Starter](https://github.com/FactorSef/ReactEazyStarter "Репозиторий React Eazy Starter") - является готовым решением для тех кто не хочет использовать [CRA](https://github.com/FactorSef/ReactEazyStarter "Официальный сайт Create React App"), но хочет иметь маштабируемую платформу для разработки своих [React](https://reactjs.org "Официальный сайт React.js") приложений.
 
 ## Что было сделано:
-- [x] Поддержка Typescript
+- [x] Поддержка TypeScript
 - [x] Поддержка CSS, SASS/SCSS, LESS
 - [x] Поддержка CSSModules
 - [ ] Добавлен SVGR
