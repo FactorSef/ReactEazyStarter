@@ -25,7 +25,8 @@ module.exports = function (api) {
 	];
 
 	const plugins = [
-		["@babel/plugin-proposal-class-properties", { "loose" : false }],
+		['@babel/plugin-proposal-class-properties', { loose: false }],
+		['@babel/plugin-proposal-optional-chaining', { loose: false }],
 		'react-hot-loader/babel',
 	].filter(Boolean);
 
@@ -33,4 +34,4 @@ module.exports = function (api) {
 		presets,
 		plugins,
 	};
-}
+};
