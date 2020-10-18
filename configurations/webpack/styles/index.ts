@@ -36,8 +36,11 @@ function castRule(loader: LoaderType, useCSSModules?: boolean): RuleSetRule {
 		test: castExtension(loader, useCSSModules),
 		// Array a loaders. See more: https://webpack.js.org/configuration/module/#ruleuse
 		use: [],
+	}
+
+	if (!useCSSModules) {
 		// Exclude all modules matching any of these conditions. See more: https://webpack.js.org/configuration/module/#ruleexclude
-		exclude: castExtension(loader, !useCSSModules),
+		(rule as { exclude: RegExp, test: RegExp, use: [] }).exclude = castExtension(loader, !useCSSModules)
 	}
 
 	// Check production build

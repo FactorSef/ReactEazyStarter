@@ -15,6 +15,7 @@
 - [x] Added Prettier
 - [x] Configured env-cmd
 - [x] Added Storybook
+- [x] Added MobX
 
 More details about the project are described in [documentation](/docs/intro.md).
 
