@@ -22,7 +22,8 @@ module.exports = function (api) {
 			},
 		],
 		'@babel/preset-env',
-	];
+		!development && ['minify'],
+	].filter(Boolean);
 
 	const plugins = [
 		['@babel/plugin-proposal-class-properties', { loose: false }],

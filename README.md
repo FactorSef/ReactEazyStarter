@@ -17,7 +17,7 @@
 -   [x] Configured env-cmd
 -   [x] Added Storybook
 -   [x] Added MobX
--   [ ] Added minifications
+-   [x] Added build optimization
 -   [ ] Added Unit-tests
 
 > For the project to work properly, you need to install the editor extensions:

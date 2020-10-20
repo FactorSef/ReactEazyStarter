@@ -3,10 +3,11 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ESLintPlugin from 'eslint-webpack-plugin';
 import StyleLintPlugin from 'stylelint-webpack-plugin';
 import MiniCSSExtractPlugin from 'mini-css-extract-plugin';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
 import { Pathes, Helpers } from '../utils';
 import extensions from './extensions';
-import { mapStyleLoader } from './webpack';
+import { mapStyleLoader, optimization } from './webpack';
 
 const { NODE_ENV } = process.env;
 const isProduction = Helpers.isProduction(NODE_ENV);
@@ -17,7 +18,7 @@ const config: webpack.Configuration = {
 	target: 'web',
 	context: Pathes.staticPathes.app,
 	entry: {
-		app: Helpers.map(!Helpers.isProduction(NODE_ENV) && 'react-hot-loader/patch', Pathes.staticPathes.entry) as [string, ...string[]],
+		app: Helpers.map(!isProduction && 'react-hot-loader/patch', Pathes.staticPathes.entry) as [string, ...string[]],
 	},
 	output: {
 		filename: 'js/[name].js',
@@ -28,7 +29,7 @@ const config: webpack.Configuration = {
 	resolve: {
 		extensions,
 		alias: {
-			'react-dom': '@hot-loader/react-dom',
+			'react-dom': isProduction ? 'react-dom' : '@hot-loader/react-dom',
 			...Pathes.aliases,
 		},
 	},
@@ -37,7 +38,7 @@ const config: webpack.Configuration = {
 			{
 				test: /\.[jt]s(x)?$/,
 				exclude: /node_modules/,
-				use: ['react-hot-loader/webpack', 'babel-loader'],
+				use: Helpers.map(!isProduction && 'react-hot-loader/webpack', 'babel-loader') as string[],
 			},
 			// Get loaders for css, sass/scss and less
 			...mapStyleLoader(['css', 'sass', 'less'], true),
@@ -102,6 +103,7 @@ const config: webpack.Configuration = {
 		],
 	},
 	plugins: Helpers.map(
+		isProduction && new CleanWebpackPlugin(),
 		new ESLintPlugin({
 			files: '*',
 			extensions: ['js, ts, jsx, tsx'],
@@ -128,6 +130,8 @@ const config: webpack.Configuration = {
 		}),
 		new webpack.HotModuleReplacementPlugin()
 	) as webpack.Plugin[],
+	optimization: optimization(isProduction),
+	stats: isProduction ? 'normal' : 'errors-warnings',
 	devServer: {
 		hot: true,
 		historyApiFallback: true,
