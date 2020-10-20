@@ -12,5 +12,10 @@ export default observer(() => {
 		}, 1000);
 	}, []);
 
-	return <div className={styles.mobxTimer}>Timer: {store.secondsPassed}</div>;
+	return (
+		<div className={styles.mobxTimer}>
+			<p>MobX timer sample:</p>
+			<span>{store.secondsPassed}</span>
+		</div>
+	);
 });
