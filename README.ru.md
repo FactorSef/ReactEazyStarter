@@ -15,6 +15,18 @@
 -   [x] Настроен env-cmd
 -   [x] Добавлен Storybook
 -   [x] Добавлен MobX
+-   [ ] Добавлена минификация
+-   [ ] Добавлены Unit-тесты
+
+> Для полноценной работы проекта необходимо установить расширения редактора:
+>
+> [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) (на примере VS Code)
+>
+> [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) (на примере VS Code)
+>
+> [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) (на примере VS Code)
+>
+> [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) (на примере VS Code)
 
 Более подробно о настройке описано в [документации](/docs/intro.ru.md)
 

@@ -17,6 +17,18 @@
 -   [x] Configured env-cmd
 -   [x] Added Storybook
 -   [x] Added MobX
+-   [ ] Added minifications
+-   [ ] Added Unit-tests
+
+> For the project to work properly, you need to install the editor extensions:
+>
+> [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) (if using VS Code)
+>
+> [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) (if using VS Code)
+>
+> [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) (if using VS Code)
+>
+> [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) (if using VS Code)
 
 More details about the project are described in [documentation](/docs/intro.md).
 
