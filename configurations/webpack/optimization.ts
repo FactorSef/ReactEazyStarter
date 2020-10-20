@@ -5,7 +5,9 @@ import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 
 export function getOptimization(isProduction?: boolean): Options.Optimization {
 	if (!isProduction) {
-		return null;
+		return {
+			minimize: false,
+		};
 	}
 
 	return {
