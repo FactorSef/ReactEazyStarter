@@ -2,6 +2,7 @@ import * as webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ESLintPlugin from 'eslint-webpack-plugin';
 import StyleLintPlugin from 'stylelint-webpack-plugin';
+import MiniCSSExtractPlugin from 'mini-css-extract-plugin';
 
 import { Pathes, Helpers } from '../utils';
 import extensions from './extensions';
@@ -110,6 +111,10 @@ const config: webpack.Configuration = {
 			files: '**/*.(c|sa|sc|le)ss',
 			fix: false,
 			failOnError: false,
+		}),
+		new MiniCSSExtractPlugin({
+			filename: 'css/[name].[hash].[id].css',
+			chunkFilename: 'css/[chunkhash].[id].css',
 		}),
 		new webpack.DefinePlugin({
 			...Helpers.mapEnv('NODE_ENV'),
