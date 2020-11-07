@@ -106,7 +106,7 @@ const config: webpack.Configuration = {
 		isProduction && new CleanWebpackPlugin(),
 		new ESLintPlugin({
 			files: '*',
-			extensions: ['js, ts, jsx, tsx'],
+			extensions: ['js', 'ts', 'jsx', 'tsx'],
 		}),
 		new StyleLintPlugin({
 			configFile: Helpers.resolvePath('.stylelintrc.json'),
