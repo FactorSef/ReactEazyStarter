@@ -1,5 +1,6 @@
 {
   "name": "react-eazy-starter",
+  "description": "Complete webpack 5 config for react app with ts",
   "version": "2.0.0",
   "author": "Yakovenko Andrey",
   "license": "MIT",
@@ -16,15 +17,14 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "lodash": "^4.17.20",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-hot-loader": "^4.13.0"
   },
   "devDependencies": {
     "ts-node": "^9.1.1",
     "typescript": "^4.1.2",
     "webpack": "^5.10.0",
-    "webpack-cli": "^4.2.0",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-cli": "^4.2.0"
   }
 }
