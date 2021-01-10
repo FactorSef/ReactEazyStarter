@@ -12,8 +12,8 @@
     "node": "^13.12.0"
   },
   "scripts": {
-    "serve": "webpack serve --config webpack/webpack.config.ts",
-    "build": "webpack --config webpack/webpack.config.ts"
+    "serve": "webpack serve",
+    "build": "webpack"
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -27,14 +27,26 @@
     "@babel/preset-env": "^7.12.10",
     "@babel/preset-react": "^7.12.10",
     "@babel/preset-typescript": "^7.12.7",
+    "@types/babel__core": "^7.1.12",
+    "@types/babel__preset-env": "^7.9.1",
     "@types/classnames": "^2.2.11",
+    "@types/eslint": "^7.2.6",
+    "@types/less": "^3.0.2",
     "@types/lodash": "^4.14.165",
+    "@types/node-sass": "^4.11.1",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/webpack-dev-server": "^3.11.1",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",
+    "css-modules-typescript-loader": "^4.0.1",
+    "eslint": "^7.15.0",
     "html-webpack-plugin": "^4.5.0",
+    "less": "^4.1.0",
+    "less-loader": "^7.2.1",
     "node-sass": "^5.0.0",
     "postcss-loader": "^4.1.0",
     "postcss-preset-env": "^6.7.0",
